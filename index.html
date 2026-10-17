@@ -138,7 +138,32 @@ nav .btn{margin-left:18px;padding:9px 16px;font-size:15px}
 .privacy{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
 @media (max-width:800px){.privacy{grid-template-columns:1fr}}
 
-/* Tham gia thử nghiệm */
+/* Nút Google Play */
+.play{display:inline-flex;align-items:center;gap:12px;background:#000;color:#fff;text-decoration:none;border:1.5px solid #a6a6a6;
+  border-radius:12px;padding:9px 20px 9px 14px;line-height:1.1;transition:transform .15s}
+.play:hover{transform:translateY(-1px)}
+.play svg{width:30px;height:33px;flex:none}
+.play span{display:flex;flex-direction:column;text-align:left}
+.play small{font-size:11px;letter-spacing:.04em;opacity:.9}
+.play b{font-size:23px;font-weight:600;font-family:"Be Vietnam Pro",system-ui,sans-serif;letter-spacing:-.2px}
+.play.sm{padding:5px 14px 5px 10px;gap:8px;border-radius:9px;margin-left:18px}
+.play.sm svg{width:20px;height:22px}
+.play.sm small{font-size:8.5px}
+.play.sm b{font-size:15px}
+.play{white-space:nowrap}
+@media (max-width:760px){
+  nav strong{font-size:15px;white-space:nowrap}
+  .play.sm{margin-left:auto;padding:5px 10px 5px 8px}
+  .play.sm small{display:none}
+  .play.sm b{font-size:14px}
+}
+@media (max-width:360px){.play.sm span{display:none}}
+.play.lg{padding:12px 26px 12px 18px}
+.play.lg svg{width:36px;height:40px}
+.play.lg small{font-size:12.5px}
+.play.lg b{font-size:28px}
+
+/* Tải về */
 .join{background:linear-gradient(140deg,#0A3D62,#1b6fa8);color:#fff;border-radius:30px;padding:48px 36px;margin-top:10px;position:relative;overflow:hidden}
 .join h2{color:#fff}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0}
@@ -170,8 +195,9 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
   <a class="nl" href="#ghi-nhanh">Ghi nhanh</a>
   <a class="nl" href="#tinh-nang">Tính năng</a>
   <a class="nl" href="#hinh-anh">Hình ảnh</a>
+  <a class="nl" href="#tai-ve">Tải về</a>
   <a class="nl" href="#hoi-dap">Hỏi đáp</a>
-  <a class="btn main" href="#thu-nghiem">Dùng thử</a>
+  <a class="play sm" href="https://play.google.com/store/apps/details?id=com.nhaminh.tai_chinh_nha_minh" aria-label="Tải trên Google Play"><svg viewBox="0 0 40 44" aria-hidden="true"><path fill="#00D7FE" d="M3 2 23 22 3 42c-.6-.5-1-1.3-1-2.3V4.3C2 3.3 2.4 2.5 3 2z"/><path fill="#00F076" d="M3 2c.8-.6 2-.7 3.2 0L29 15.4 23 22z"/><path fill="#FF3A44" d="M3 42 23 22l6 6.6L6.2 42c-1.2.7-2.4.6-3.2 0z"/><path fill="#FFD400" d="m29 15.4 6.6 3.8c2.2 1.3 2.2 3.3 0 4.6L29 28.6 23 22z"/></svg><span><small>TẢI NỘI DUNG TRÊN</small><b>Google Play</b></span></a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
@@ -179,7 +205,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
     <h1>Tiền chung cả nhà<br><span class="em">rõ ràng</span> từng đồng</h1>
     <p class="lead">Sổ thu chi dùng chung cho vợ chồng, bố mẹ, con cái. Nói 1 câu hoặc chụp biên lai chuyển tiền là ghi xong — ai chi gì, chi bao nhiêu, cả nhà cùng thấy.</p>
     <div class="ctas">
-      <a class="btn main" href="#thu-nghiem">Dùng thử miễn phí</a>
+      <a class="play lg" href="https://play.google.com/store/apps/details?id=com.nhaminh.tai_chinh_nha_minh" aria-label="Tải trên Google Play"><svg viewBox="0 0 40 44" aria-hidden="true"><path fill="#00D7FE" d="M3 2 23 22 3 42c-.6-.5-1-1.3-1-2.3V4.3C2 3.3 2.4 2.5 3 2z"/><path fill="#00F076" d="M3 2c.8-.6 2-.7 3.2 0L29 15.4 23 22z"/><path fill="#FF3A44" d="M3 42 23 22l6 6.6L6.2 42c-1.2.7-2.4.6-3.2 0z"/><path fill="#FFD400" d="m29 15.4 6.6 3.8c2.2 1.3 2.2 3.3 0 4.6L29 28.6 23 22z"/></svg><span><small>TẢI NỘI DUNG TRÊN</small><b>Google Play</b></span></a>
       <a class="btn ghost" href="#tinh-nang">Xem tính năng</a>
     </div>
     <div class="trust"><span>Miễn phí</span><span>Không hỏi mật khẩu / OTP ngân hàng</span><span>Ảnh xử lý ngay trên máy</span></div>
@@ -381,18 +407,18 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
   </div>
 </div></section>
 
-<section id="thu-nghiem" style="padding-top:20px"><div class="wrap">
+<section id="tai-ve" style="padding-top:20px"><div class="wrap">
   <div class="join">
-    <span class="eyebrow" style="color:#ffb59e">Đang thử nghiệm kín trên Google Play</span>
-    <h2>Mời gia đình bạn dùng thử miễn phí</h2>
-    <p style="color:#d7e6f4;max-width:680px;margin:12px 0 0">App cần thêm người dùng thật để hoàn thiện trước khi phát hành rộng rãi. Cảm ơn bạn đã giúp!</p>
+    <span class="eyebrow" style="color:#ffb59e">Đã có trên Google Play</span>
+    <h2>Tải app miễn phí cho cả nhà</h2>
+    <p style="color:#d7e6f4;max-width:680px;margin:12px 0 0">Cài trên điện thoại Android của từng thành viên, mất chưa tới 1 phút để bắt đầu.</p>
     <div class="steps">
-      <div class="step"><b>1</b><h3>Mở link tham gia</h3><p>Dùng điện thoại Android đã đăng nhập Gmail, bấm nút bên dưới rồi chọn "Trở thành người kiểm thử".</p></div>
-      <div class="step"><b>2</b><h3>Cài từ Google Play</h3><p>Bấm "Tải xuống trên Google Play" trên cùng trang đó và cài app như bình thường.</p></div>
-      <div class="step"><b>3</b><h3>Dùng thử 14 ngày</h3><p>Tạo gia đình, mời người thân, ghi vài khoản chi. Giữ app trên máy 14 ngày và mở 1–2 lần mỗi ngày.</p></div>
+      <div class="step"><b>1</b><h3>Tải app</h3><p>Bấm nút Google Play bên dưới (hoặc tìm "Tài Chính Nhà Mình" trên Google Play) và cài như bình thường.</p></div>
+      <div class="step"><b>2</b><h3>Tạo gia đình</h3><p>Đặt tên gia đình, chọn ảnh đại diện — bạn là Admin. Muốn dùng một mình cũng được.</p></div>
+      <div class="step"><b>3</b><h3>Mời người thân</h3><p>Gia đình → Mời thành viên: gửi mã QR hoặc link qua Zalo, Messenger. Dữ liệu tự đồng bộ giữa các máy.</p></div>
     </div>
-    <a class="btn main" href="https://play.google.com/apps/testing/com.nhaminh.tai_chinh_nha_minh">Tham gia thử nghiệm trên Google Play</a>
-    <p class="note">Nếu đã cài bản APK gửi riêng trước đây, hãy gỡ app cũ rồi mới cài từ Google Play — dữ liệu gia đình nằm trên máy chủ, mở app và tham gia lại bằng mã mời.<br>Góp ý, báo lỗi: <a style="color:#ffd2c4" href="mailto:taichinhnhaminh.hotro@gmail.com">taichinhnhaminh.hotro@gmail.com</a></p>
+    <a class="play lg" href="https://play.google.com/store/apps/details?id=com.nhaminh.tai_chinh_nha_minh" aria-label="Tải trên Google Play"><svg viewBox="0 0 40 44" aria-hidden="true"><path fill="#00D7FE" d="M3 2 23 22 3 42c-.6-.5-1-1.3-1-2.3V4.3C2 3.3 2.4 2.5 3 2z"/><path fill="#00F076" d="M3 2c.8-.6 2-.7 3.2 0L29 15.4 23 22z"/><path fill="#FF3A44" d="M3 42 23 22l6 6.6L6.2 42c-1.2.7-2.4.6-3.2 0z"/><path fill="#FFD400" d="m29 15.4 6.6 3.8c2.2 1.3 2.2 3.3 0 4.6L29 28.6 23 22z"/></svg><span><small>TẢI NỘI DUNG TRÊN</small><b>Google Play</b></span></a>
+    <p class="note">Góp ý, báo lỗi: <a style="color:#ffd2c4" href="mailto:taichinhnhaminh.hotro@gmail.com">taichinhnhaminh.hotro@gmail.com</a></p>
   </div>
 </div></section>
 
