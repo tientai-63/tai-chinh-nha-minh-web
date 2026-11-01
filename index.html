@@ -94,8 +94,10 @@ nav .btn{margin-left:18px;padding:9px 16px;font-size:15px}
 
 /* Thẻ "ghi nhanh" */
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
-@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.cards{grid-template-columns:1fr}}
+.cards.five{grid-template-columns:repeat(5,1fr);gap:14px}
+@media (max-width:1100px){.cards.five{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:900px){.cards,.cards.five{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.cards,.cards.five{grid-template-columns:1fr}}
 .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:var(--shadow)}
 .card .ic{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:14px}
 .card p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
@@ -203,12 +205,12 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
 <header class="hero"><div class="wrap">
   <div>
     <h1>Tiền chung cả nhà<br><span class="em">rõ ràng</span> từng đồng</h1>
-    <p class="lead">Sổ thu chi dùng chung cho vợ chồng, bố mẹ, con cái. Nói 1 câu hoặc chụp biên lai chuyển tiền là ghi xong — ai chi gì, chi bao nhiêu, cả nhà cùng thấy.</p>
+    <p class="lead">Sổ thu chi dùng chung cho vợ chồng, bố mẹ, con cái. Chuyển khoản xong app tự ghi từ thông báo ngân hàng, hoặc nói 1 câu là xong — ai chi gì, chi bao nhiêu, cả nhà cùng thấy.</p>
     <div class="ctas">
       <a class="play lg" href="https://play.google.com/store/apps/details?id=com.nhaminh.tai_chinh_nha_minh" aria-label="Tải trên Google Play"><svg viewBox="0 0 40 44" aria-hidden="true"><path fill="#00D7FE" d="M3 2 23 22 3 42c-.6-.5-1-1.3-1-2.3V4.3C2 3.3 2.4 2.5 3 2z"/><path fill="#00F076" d="M3 2c.8-.6 2-.7 3.2 0L29 15.4 23 22z"/><path fill="#FF3A44" d="M3 42 23 22l6 6.6L6.2 42c-1.2.7-2.4.6-3.2 0z"/><path fill="#FFD400" d="m29 15.4 6.6 3.8c2.2 1.3 2.2 3.3 0 4.6L29 28.6 23 22z"/></svg><span><small>TẢI NỘI DUNG TRÊN</small><b>Google Play</b></span></a>
       <a class="btn ghost" href="#tinh-nang">Xem tính năng</a>
     </div>
-    <div class="trust"><span>Miễn phí</span><span>Không hỏi mật khẩu / OTP ngân hàng</span><span>Ảnh xử lý ngay trên máy</span></div>
+    <div class="trust"><span>Miễn phí</span><span>Tự ghi từ thông báo ngân hàng</span><span>Không hỏi mật khẩu / OTP ngân hàng</span><span>Ảnh xử lý ngay trên máy</span></div>
   </div>
   <div class="hero-phones">
     <div class="phone p1"><img src="img/app/w01_tong_quan.jpg" alt="Màn hình Tổng quan: Ví Gia Đình, Ví Cá nhân, cảnh báo cần duyệt"></div>
@@ -218,16 +220,17 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
 
 <div class="stats"><div class="wrap">
   <div><b>3 giây</b><span>để ghi 1 khoản chi</span></div>
-  <div><b>20+</b><span>ngân hàng & ví đọc được biên lai</span></div>
+  <div><b>20+</b><span>ngân hàng & ví tự ghi được</span></div>
   <div><b>2 ví</b><span>Quỹ chung + Ví cá nhân riêng tư</span></div>
   <div><b>0 đ</b><span>miễn phí cho cả nhà</span></div>
 </div></div>
 
 <section id="ghi-nhanh"><div class="wrap center">
   <span class="eyebrow">Ghi chép không còn là việc vặt</span>
-  <h2>4 cách ghi, cách nào cũng <span class="em">nhanh</span></h2>
+  <h2>5 cách ghi, cách nào cũng <span class="em">nhanh</span></h2>
   <p class="muted" style="max-width:640px;margin:14px auto 0">Lý do sổ thu chi hay bị bỏ dở là vì ghi mất công. Tài Chính Nhà Mình tự điền số tiền, danh mục, ghi chú — bạn chỉ cần kiểm tra lại.</p>
-  <div class="cards" style="text-align:left">
+  <div class="cards five" style="text-align:left">
+    <div class="card"><div class="ic" style="background:#fff4d6">🤖</div><h3>Tự ghi từ ngân hàng</h3><p>Chuyển khoản, quẹt thẻ xong — app đọc thông báo biến động số dư và tự ghi khoản chi, không cần mở app.</p></div>
     <div class="card"><div class="ic" style="background:#fdeee8">🎙️</div><h3>Nói 1 câu</h3><p>"Tiền điện tháng 10 một triệu hai ví chung" — app hiểu tiếng Việt tự nhiên và tự lưu sau 3 giây.</p></div>
     <div class="card"><div class="ic" style="background:#e8f1fb">🧾</div><h3>Chụp biên lai</h3><p>Ảnh "chuyển tiền thành công" của app ngân hàng, hoá đơn siêu thị — đọc số tiền, người nhận, nội dung.</p></div>
     <div class="card"><div class="ic" style="background:#e9f6ef">📲</div><h3>Quét màn hình</h3><p>Vừa chuyển khoản xong? Kéo thanh thông báo, bấm ô "Quét màn hình" — không cần mở app.</p></div>
@@ -239,6 +242,22 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
   <div class="center"><span class="eyebrow">Tính năng nổi bật</span><h2>Mọi thứ cả nhà cần để quản lý tiền</h2></div>
 
   <div class="feat">
+    <div class="media"><div class="phone"><img src="img/app/w13_tu_ghi.jpg" alt="Giao dịch được tự ghi từ thông báo ngân hàng" loading="lazy"></div><div class="phone"><img src="img/app/w14_tu_ghi_cai_dat.jpg" alt="Cài đặt Tự ghi từ thông báo ngân hàng" loading="lazy"></div></div>
+    <div>
+      <span class="tag">Mới · Tự ghi</span>
+      <h3>Chuyển khoản xong, app tự ghi luôn</h3>
+      <p class="muted">Bật một lần, sau đó mỗi khi app ngân hàng hay ví báo biến động số dư, Tài Chính Nhà Mình tự ghi khoản chi — kể cả khi app đang tắt. Không phải gõ, không phải chụp màn hình.</p>
+      <ul>
+        <li>Chọn "Tự ghi luôn" hoặc "Hỏi trước khi ghi" (bấm Ghi · Sửa · Bỏ qua ngay trên thông báo)</li>
+        <li>Chọn chỉ ghi tiền ra, hoặc ghi cả tiền vào</li>
+        <li>Tự đoán danh mục từ nội dung chuyển khoản; khoản tự ghi có dấu 🤖, sửa hoặc xoá như thường</li>
+        <li>Không cần mật khẩu, không liên kết tài khoản, không đọc tin nhắn SMS</li>
+        <li>Chỉ đọc thông báo của app ngân hàng & ví, xử lý ngay trên điện thoại</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="feat rev">
     <div class="media one"><div class="phone"><img src="img/app/w02_noi_mot_cau.jpg" alt="Ghi giao dịch bằng giọng nói" loading="lazy"></div></div>
     <div>
       <span class="tag">Giọng nói & gõ chữ</span>
@@ -253,7 +272,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
     </div>
   </div>
 
-  <div class="feat rev">
+  <div class="feat">
     <div class="media one"><div class="phone"><img src="img/app/w03_doc_bien_lai.jpg" alt="Đọc biên lai chuyển tiền" loading="lazy"></div></div>
     <div>
       <span class="tag">Biên lai & quét màn hình</span>
@@ -269,7 +288,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
     </div>
   </div>
 
-  <div class="feat">
+  <div class="feat rev">
     <div class="media"><div class="phone"><img src="img/app/w05_duyet_chi.jpg" alt="Duyệt chi" loading="lazy"></div><div class="phone"><img src="img/app/w04_giao_dich.jpg" alt="Danh sách giao dịch" loading="lazy"></div></div>
     <div>
       <span class="tag">Quỹ chung minh bạch</span>
@@ -285,7 +304,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
     </div>
   </div>
 
-  <div class="feat rev">
+  <div class="feat">
     <div class="media"><div class="phone"><img src="img/app/w07_lich.jpg" alt="Lịch chi tiêu" loading="lazy"></div><div class="phone"><img src="img/app/w08_so_sanh.jpg" alt="So sánh chi tiêu" loading="lazy"></div></div>
     <div>
       <span class="tag">Báo cáo dễ hiểu</span>
@@ -300,7 +319,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
     </div>
   </div>
 
-  <div class="feat">
+  <div class="feat rev">
     <div class="media"><div class="phone"><img src="img/app/w09_muc_tieu.jpg" alt="Hũ tiết kiệm" loading="lazy"></div><div class="phone"><img src="img/app/w06_bao_cao.jpg" alt="Báo cáo" loading="lazy"></div></div>
     <div>
       <span class="tag">Tiết kiệm & ngân sách</span>
@@ -314,7 +333,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
     </div>
   </div>
 
-  <div class="feat rev">
+  <div class="feat">
     <div class="media"><div class="phone"><img src="img/app/w10_gia_dinh.jpg" alt="Gia đình" loading="lazy"></div><div class="phone"><img src="img/app/w12_thong_bao.jpg" alt="Thông báo" loading="lazy"></div></div>
     <div>
       <span class="tag">Cả nhà cùng dùng</span>
@@ -334,6 +353,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
   <div class="center"><span class="eyebrow">Đầy đủ</span><h2>Tất cả tính năng</h2></div>
   <div class="groups">
     <div class="group"><h3>✍️ Ghi chép</h3><ul>
+      <li>Tự ghi từ thông báo ngân hàng & ví</li>
       <li>Ghi bằng giọng nói tiếng Việt, tự lưu</li>
       <li>Gõ / dán câu tự nhiên, tin nhắn ngân hàng</li>
       <li>Chụp hoá đơn, đọc dòng "Tổng cộng"</li>
@@ -369,10 +389,11 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
       <li>Khoản chi mới, cần duyệt, kết quả duyệt</li>
       <li>Bình luận và cảm xúc mới</li>
       <li>Nhắc nhở ngân sách</li>
+      <li>"Đã tự ghi" khi có biến động số dư</li>
     </ul></div>
     <div class="group"><h3>🔒 Riêng tư</h3><ul>
       <li>Không hỏi mật khẩu / OTP ngân hàng</li>
-      <li>Ảnh, giọng nói xử lý trên điện thoại</li>
+      <li>Ảnh, giọng nói, thông báo ngân hàng xử lý trên điện thoại</li>
       <li>Ví cá nhân chỉ mình bạn xem</li>
       <li>Tự xoá tài khoản & dữ liệu trong app</li>
     </ul></div>
@@ -383,6 +404,8 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
   <div class="center"><span class="eyebrow">Xem trước</span><h2>Giao diện app</h2><p class="muted">Vuốt ngang để xem thêm</p></div>
   <div class="gallery">
     <figure><div class="phone"><img src="img/app/w01_tong_quan.jpg" alt="" loading="lazy"></div><figcaption>Tổng quan</figcaption></figure>
+    <figure><div class="phone"><img src="img/app/w13_tu_ghi.jpg" alt="" loading="lazy"></div><figcaption>Tự ghi từ ngân hàng</figcaption></figure>
+    <figure><div class="phone"><img src="img/app/w14_tu_ghi_cai_dat.jpg" alt="" loading="lazy"></div><figcaption>Cài đặt Tự ghi</figcaption></figure>
     <figure><div class="phone"><img src="img/app/w02_noi_mot_cau.jpg" alt="" loading="lazy"></div><figcaption>Ghi nhanh</figcaption></figure>
     <figure><div class="phone"><img src="img/app/w03_doc_bien_lai.jpg" alt="" loading="lazy"></div><figcaption>Đọc biên lai</figcaption></figure>
     <figure><div class="phone"><img src="img/app/w04_giao_dich.jpg" alt="" loading="lazy"></div><figcaption>Giao dịch</figcaption></figure>
@@ -402,7 +425,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
   <h2>Tiền vẫn ở ngân hàng của bạn</h2>
   <div class="privacy" style="text-align:left">
     <div class="card"><div class="ic" style="background:#e9f6ef">🏦</div><h3>Chỉ là sổ ghi chép</h3><p>App không giữ tiền, không liên kết tài khoản, không bao giờ hỏi mật khẩu hay mã OTP ngân hàng.</p></div>
-    <div class="card"><div class="ic" style="background:#e8f1fb">📱</div><h3>Xử lý trên máy</h3><p>Ảnh biên lai, màn hình quét và giọng nói được đọc ngay trên điện thoại, không tải ảnh lên máy chủ.</p></div>
+    <div class="card"><div class="ic" style="background:#e8f1fb">📱</div><h3>Xử lý trên máy</h3><p>Thông báo ngân hàng, ảnh biên lai và giọng nói được đọc ngay trên điện thoại, không tải ảnh hay nội dung thông báo lên máy chủ.</p></div>
     <div class="card"><div class="ic" style="background:#fdeee8">🗝️</div><h3>Bạn làm chủ dữ liệu</h3><p>Ví cá nhân chỉ mình bạn xem. Xuất dữ liệu ra CSV bất cứ lúc nào, tự xoá tài khoản ngay trong app.</p></div>
   </div>
 </div></section>
@@ -428,6 +451,7 @@ footer .links{display:flex;flex-wrap:wrap;gap:14px 20px}
     <details><summary>App có giữ tiền của tôi không?</summary><p>Không. App chỉ là sổ ghi chép thu chi. Tiền vẫn nằm trong tài khoản ngân hàng của bạn; app không bao giờ hỏi mật khẩu hay mã OTP ngân hàng.</p></details>
     <details><summary>App có mất phí không?</summary><p>Miễn phí. Sau này app có thể hiển thị quảng cáo nhỏ để duy trì máy chủ; không có quảng cáo ở màn hình ghi giao dịch hay thanh toán.</p></details>
     <details><summary>Ai xem được dữ liệu của tôi?</summary><p>Chỉ thành viên trong gia đình bạn xem được Quỹ chung. Ví cá nhân chỉ mình bạn xem được. Người ngoài không vào được gia đình nếu không có mã mời do Admin tạo.</p></details>
+    <details><summary>Tự ghi từ thông báo ngân hàng hoạt động thế nào?</summary><p>Vào Gia đình → Tự ghi từ thông báo ngân hàng, chọn chế độ và cho phép app đọc thông báo. Khi app ngân hàng hoặc ví báo biến động số dư, Tài Chính Nhà Mình đọc số tiền, nội dung và tự ghi (hoặc hỏi trước nếu bạn chọn). App chỉ đọc thông báo của các app ngân hàng & ví, xử lý ngay trên máy, không đọc tin nhắn SMS, không cần mật khẩu. Mẹo: một số app ngân hàng (vd. ACB ONE) khi đang mở không gửi thông báo ra ngoài — chuyển tiền xong bấm nút Home là thông báo đến và được ghi.</p></details>
     <details><summary>App đọc được biên lai của ngân hàng nào?</summary><p>Đã thử với hơn 20 ngân hàng và ví phổ biến: Vietcombank, BIDV, VietinBank, Agribank, Techcombank, MB, ACB, VPBank, TPBank, Sacombank, VIB, HDBank, SHB, SeABank, Cake, Timo, MoMo, ZaloPay, ViettelPay, ShopeePay… Nếu app đọc sai, bạn vẫn sửa được trước khi lưu — và gửi ảnh cho chúng tôi để cải thiện.</p></details>
     <details><summary>Quét màn hình có an toàn không? Sao lần nào cũng hỏi?</summary><p>App chỉ chụp 1 khung hình khi bạn bấm ô "Quét màn hình", đọc chữ ngay trên máy rồi xoá ảnh. Android bắt buộc hỏi mỗi lần chụp màn hình để bảo vệ bạn — chỉ cần bấm "Chia sẻ màn hình". Một số app ngân hàng chặn chụp màn hình; khi đó hãy dùng nút "Chia sẻ" biên lai.</p></details>
     <details><summary>Quét VietQR hoạt động thế nào?</summary><p>App đọc mã QR chuyển khoản, rồi mở app ngân hàng của bạn với thông tin người nhận và số tiền điền sẵn. Việc chuyển tiền diễn ra hoàn toàn trong app ngân hàng.</p></details>
